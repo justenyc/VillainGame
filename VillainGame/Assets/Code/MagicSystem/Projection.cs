@@ -173,7 +173,16 @@ public class Projection : MonoBehaviour
         transform.position += new Vector3(0, 0.05f, 0);
 
         this.GetComponent<MeshRenderer>().enabled = true;
-        ps.SetActive(true);
+
+        try
+        {
+            ps.SetActive(true);
+
+        }
+        catch
+        {
+
+        }
     }
 
     /*private void OnTriggerEnterDeprecated(Collider other)

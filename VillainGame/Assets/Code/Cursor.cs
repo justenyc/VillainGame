@@ -5,29 +5,26 @@ using System.Linq;
 
 public class Cursor : MonoBehaviour
 {
-    //TODO List.RemoveAt instead of Queue.dequeue
-
     public GameObject prefab;
     public static Cursor cursor;
     [SerializeField]
-    List<string> conjureQueue = new List<string>();
+    public List<string> conjureQueue = new List<string>();
 
     public float conjureTime = 1f;
     public float conjureTimer;
     bool conjuring = false;
     Vector3 conjurePoint;
+    Vector3 conjurePointRotation;
 
     public Collider col;
 
-    bool foundZone = false; //The ZoneFinder Child will scan for any Magic Zones first. If none are found then instantiate one at the hit.point
-
     private void Start()
     {
-        col = this.GetComponent<Collider>();
-        conjureTimer = conjureTime;
-
         if (cursor == null)
             cursor = this;
+
+        col = this.GetComponent<Collider>();
+        conjureTimer = conjureTime;
     }
 
     // Update is called once per frame
@@ -35,6 +32,7 @@ public class Cursor : MonoBehaviour
     {
         if (conjuring == true)
         {
+            //Resets Conjure timer when the queue is empty or after the timer hits 0
             if (conjureQueue.Count < 1)
             {
                 conjureTimer = conjureTime;
@@ -54,11 +52,11 @@ public class Cursor : MonoBehaviour
             AddconjureQueue();
         }
 
+        //Only start conjuring after mouse click
         if (Input.GetMouseButtonDown(0) && conjuring == false)
         {
-            conjurePoint = ShootRay();
+            ShootRay();
             conjuring = true;
-            //Instantiate(prefab, ShootRay(), Quaternion.identity);
         }
         else if (Input.GetKeyDown(KeyCode.Space))
             conjureQueue.Clear();
@@ -76,18 +74,22 @@ public class Cursor : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A))
         {
             conjureQueue.Add("Lightning");
+            ConjureQueueUI.instance.UpdateQueue();
         }
         else if (Input.GetKeyDown(KeyCode.S))
         {
             conjureQueue.Add("Water");
+            ConjureQueueUI.instance.UpdateQueue();
         }
         else if (Input.GetKeyDown(KeyCode.D))
         {
             conjureQueue.Add("Earth");
+            ConjureQueueUI.instance.UpdateQueue();
         }
         else if (Input.GetKeyDown(KeyCode.W))
         {
             conjureQueue.Add("Fire");
+            ConjureQueueUI.instance.UpdateQueue();
         }
     }
 
@@ -103,11 +105,13 @@ public class Cursor : MonoBehaviour
 
             if (magicZones.Count <= 0)
             {
-                Instantiate(prefab, conjurePoint, Quaternion.identity, this.transform);
+                Instantiate(prefab, conjurePoint, Quaternion.Euler(conjurePointRotation), this.transform);
                 MagicZone mz = GetComponentInChildren<MagicZone>();
                 magicZones.Add(mz);
+
                 mz.InitializeElementsList(conjureQueue[0]);
                 conjureQueue.RemoveAt(0);
+                ConjureQueueUI.instance.UpdateQueue();
                 mz.transform.parent = null;
             }
             else
@@ -117,6 +121,7 @@ public class Cursor : MonoBehaviour
                     mz.MagicEnforcer(conjureQueue[0]);
                 }
                 conjureQueue.RemoveAt(0);
+                ConjureQueueUI.instance.UpdateQueue();
             }
         }
     }
@@ -137,7 +142,7 @@ public class Cursor : MonoBehaviour
         return magicZones;
     }
 
-    Vector3 ShootRay()
+    void ShootRay()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
@@ -146,13 +151,14 @@ public class Cursor : MonoBehaviour
         {
             if (Physics.Raycast(ray, out hit))
             {
-                return (hit.point);
+                conjurePoint = (hit.point);
+                conjurePointRotation = hit.normal;
             }
         }
         catch
         {
-            return Vector3.zero;
+            conjurePoint = Vector3.zero;
+            conjurePointRotation = Vector3.zero;
         }
-        return Vector3.zero;
     }
 }

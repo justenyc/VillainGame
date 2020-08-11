@@ -142,7 +142,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 472992, guid: 1048366b48a8cc3429168da2a8224d7d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 472992, guid: 1048366b48a8cc3429168da2a8224d7d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -183,6 +183,98 @@ PrefabInstance:
     - target: {fileID: 10839788, guid: 1048366b48a8cc3429168da2a8224d7d, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19829034, guid: 1048366b48a8cc3429168da2a8224d7d, type: 3}
+      propertyPath: ShapeModule.type
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 19829034, guid: 1048366b48a8cc3429168da2a8224d7d, type: 3}
+      propertyPath: ShapeModule.placementMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 19829034, guid: 1048366b48a8cc3429168da2a8224d7d, type: 3}
+      propertyPath: ShapeModule.m_MeshRenderer
+      value: 
+      objectReference: {fileID: 413845542394149038}
+    - target: {fileID: 19829034, guid: 1048366b48a8cc3429168da2a8224d7d, type: 3}
+      propertyPath: ShapeModule.m_UseMeshColors
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19829034, guid: 1048366b48a8cc3429168da2a8224d7d, type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19830672, guid: 1048366b48a8cc3429168da2a8224d7d, type: 3}
+      propertyPath: ShapeModule.type
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 19830672, guid: 1048366b48a8cc3429168da2a8224d7d, type: 3}
+      propertyPath: ShapeModule.placementMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 19830672, guid: 1048366b48a8cc3429168da2a8224d7d, type: 3}
+      propertyPath: ShapeModule.m_MeshRenderer
+      value: 
+      objectReference: {fileID: 413845542394149038}
+    - target: {fileID: 19830672, guid: 1048366b48a8cc3429168da2a8224d7d, type: 3}
+      propertyPath: ShapeModule.m_UseMeshColors
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19830672, guid: 1048366b48a8cc3429168da2a8224d7d, type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19884944, guid: 1048366b48a8cc3429168da2a8224d7d, type: 3}
+      propertyPath: ShapeModule.type
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 19884944, guid: 1048366b48a8cc3429168da2a8224d7d, type: 3}
+      propertyPath: ShapeModule.placementMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 19884944, guid: 1048366b48a8cc3429168da2a8224d7d, type: 3}
+      propertyPath: ShapeModule.m_MeshRenderer
+      value: 
+      objectReference: {fileID: 413845542394149038}
+    - target: {fileID: 19884944, guid: 1048366b48a8cc3429168da2a8224d7d, type: 3}
+      propertyPath: ShapeModule.m_UseMeshColors
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19884944, guid: 1048366b48a8cc3429168da2a8224d7d, type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19884944, guid: 1048366b48a8cc3429168da2a8224d7d, type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19884944, guid: 1048366b48a8cc3429168da2a8224d7d, type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19891750, guid: 1048366b48a8cc3429168da2a8224d7d, type: 3}
+      propertyPath: ShapeModule.type
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 19891750, guid: 1048366b48a8cc3429168da2a8224d7d, type: 3}
+      propertyPath: ShapeModule.placementMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 19891750, guid: 1048366b48a8cc3429168da2a8224d7d, type: 3}
+      propertyPath: ShapeModule.m_MeshRenderer
+      value: 
+      objectReference: {fileID: 413845542394149038}
+    - target: {fileID: 19891750, guid: 1048366b48a8cc3429168da2a8224d7d, type: 3}
+      propertyPath: ShapeModule.m_UseMeshColors
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19891750, guid: 1048366b48a8cc3429168da2a8224d7d, type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19935274, guid: 1048366b48a8cc3429168da2a8224d7d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1048366b48a8cc3429168da2a8224d7d, type: 3}

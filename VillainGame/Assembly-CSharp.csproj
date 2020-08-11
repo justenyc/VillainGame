@@ -63,13 +63,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Code\Cursor.cs" />
+    <Compile Include="Assets\Code\CustomRenderQueue.cs" />
     <Compile Include="Assets\Code\DestroySelf.cs" />
-    <Compile Include="Assets\Code\MagicSpell.cs" />
-    <Compile Include="Assets\Code\MagicZone.cs" />
+    <Compile Include="Assets\Code\MagicSystem\MagicSpell.cs" />
+    <Compile Include="Assets\Code\MagicSystem\MagicZone.cs" />
+    <Compile Include="Assets\Code\MagicSystem\Projection.cs" />
+    <Compile Include="Assets\Code\MagicSystem\Sparkle.cs" />
+    <Compile Include="Assets\Code\MagicSystem\SpellCast.cs" />
+    <Compile Include="Assets\Code\MagicSystem\vfxHolder.cs" />
     <Compile Include="Assets\Code\MeshData.cs" />
-    <Compile Include="Assets\Code\Projection.cs" />
-    <Compile Include="Assets\Code\SpellCast.cs" />
-    <Compile Include="Assets\Code\vfxHolder.cs" />
+    <Compile Include="Assets\Code\UI\ConjureQueueUI.cs" />
+    <Compile Include="Assets\Code\UI\FaceCamera.cs" />
     <Compile Include="Assets\VFX\Epic Toon FX\Scripts\ETFXLightFade.cs" />
     <Compile Include="Assets\VFX\Epic Toon FX\Scripts\ETFXPitchRandomizer.cs" />
     <Compile Include="Assets\VFX\Epic Toon FX\Scripts\ETFXRotation.cs" />

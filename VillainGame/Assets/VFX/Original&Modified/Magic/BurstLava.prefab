@@ -4662,7 +4662,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 614731322741138405}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -9462,6 +9462,7 @@ GameObject:
   - component: {fileID: 3033684826688354749}
   - component: {fileID: 2508593998218643566}
   - component: {fileID: 5541723554459235680}
+  - component: {fileID: 3640151029278116023}
   m_Layer: 0
   m_Name: BurstLava
   m_TagString: Untagged
@@ -9476,14 +9477,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2673975894611108868}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.89, y: 4.01, z: -5.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4099179527485780915}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &3033684826688354749
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -10427,7 +10428,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 5
+        scalar: 30
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -14283,5 +14284,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 30530a501c88f504f9a77b0b8a186435, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3640151029278116023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2673975894611108868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373ba55770b29bb4cac7f305ecafa055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

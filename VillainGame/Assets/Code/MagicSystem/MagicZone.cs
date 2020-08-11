@@ -38,19 +38,19 @@ public class MagicZone : MonoBehaviour
         switch (element)
         {
             case "Fire":
-                Instantiate(vfxHolder.MagicSparklePrefabs["FireSparkle"], this.transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity, this.transform);
+                Instantiate(vfxHolder.MagicSparklePrefabs["FireSparkle"], this.transform.position + new Vector3(0, 0.5f, 0), this.transform.rotation, this.transform);
                 break;
 
             case "Water":
-                Instantiate(vfxHolder.MagicSparklePrefabs["WaterSparkle"], this.transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity, this.transform);
+                Instantiate(vfxHolder.MagicSparklePrefabs["WaterSparkle"], this.transform.position + new Vector3(0, 0.5f, 0), this.transform.rotation, this.transform);
                 break;
 
             case "Earth":
-                Instantiate(vfxHolder.MagicSparklePrefabs["EarthSparkle"], this.transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity, this.transform);
+                Instantiate(vfxHolder.MagicSparklePrefabs["EarthSparkle"], this.transform.position + new Vector3(0, 0.5f, 0), this.transform.rotation, this.transform);
                 break;
 
             case "Lightning":
-                Instantiate(vfxHolder.MagicSparklePrefabs["LightningSparkle"], this.transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity, this.transform);
+                Instantiate(vfxHolder.MagicSparklePrefabs["LightningSparkle"], this.transform.position + new Vector3(0, 0.5f, 0), this.transform.rotation, this.transform);
                 break;
         }
     }
@@ -63,13 +63,17 @@ public class MagicZone : MonoBehaviour
                 if (elements[elements.Count - 1] == "Lightning")
                 {
                     elements[elements.Count - 1] = "Burst";
-                    Instantiate(vfxHolder.MagicSparklePrefabs["NegationCircle"], this.transform.position - new Vector3(0, 0.5f, 0), Quaternion.identity);
+                    Sparkle[] Sparkles = GetComponentsInChildren<Sparkle>();
+                    Instantiate(vfxHolder.MagicSparklePrefabs["BurstSparkle"], this.transform.position + new Vector3(0, 0.5f, 0), this.transform.rotation, this.transform);
+                    Destroy(Sparkles[elements.Count - 1].gameObject);
                     break;
                 }
                 else if (elements[elements.Count - 1] == "Earth")
                 {
                     elements[elements.Count - 1] = "Lava";
-                    Instantiate(vfxHolder.MagicSparklePrefabs["NegationCircle"], this.transform.position - new Vector3(0, 0.5f, 0), Quaternion.identity);
+                    Sparkle[] Sparkles = GetComponentsInChildren<Sparkle>();
+                    Instantiate(vfxHolder.MagicSparklePrefabs["LavaSparkle"], this.transform.position + new Vector3(0, 0.5f, 0), this.transform.rotation, this.transform);
+                    Destroy(Sparkles[elements.Count - 1].gameObject);
                     break;
                 }
                 else
@@ -82,13 +86,17 @@ public class MagicZone : MonoBehaviour
                 if (elements[elements.Count - 1] == "Lightning")
                 {
                     elements[elements.Count - 1] = "Vacuum";
-                    Instantiate(vfxHolder.MagicSparklePrefabs["NegationCircle"], this.transform.position - new Vector3(0, 0.5f, 0), Quaternion.identity);
+                    Sparkle[] Sparkles = GetComponentsInChildren<Sparkle>();
+                    Instantiate(vfxHolder.MagicSparklePrefabs["VacuumSparkle"], this.transform.position + new Vector3(0, 0.5f, 0), this.transform.rotation, this.transform);
+                    Destroy(Sparkles[elements.Count - 1].gameObject);
                     break;
                 }
                 else if (elements[elements.Count - 1] == "Earth")
                 {
                     elements[elements.Count - 1] = "Mud";
-                    Instantiate(vfxHolder.MagicSparklePrefabs["NegationCircle"], this.transform.position - new Vector3(0, 0.5f, 0), Quaternion.identity);
+                    Sparkle[] Sparkles = GetComponentsInChildren<Sparkle>();
+                    Instantiate(vfxHolder.MagicSparklePrefabs["MudSparkle"], this.transform.position + new Vector3(0, 0.5f, 0), this.transform.rotation, this.transform);
+                    Destroy(Sparkles[elements.Count - 1].gameObject);
                     break;
                 }
                 else
@@ -102,13 +110,17 @@ public class MagicZone : MonoBehaviour
                 if (elements[elements.Count - 1] == "Fire")
                 {
                     elements[elements.Count - 1] = "Lava";
-                    Instantiate(vfxHolder.MagicSparklePrefabs["NegationCircle"], this.transform.position - new Vector3(0, 0.5f, 0), Quaternion.identity);
+                    Sparkle[] Sparkles = GetComponentsInChildren<Sparkle>();
+                    Instantiate(vfxHolder.MagicSparklePrefabs["LavaSparkle"], this.transform.position + new Vector3(0, 0.5f, 0), this.transform.rotation, this.transform);
+                    Destroy(Sparkles[elements.Count - 1].gameObject);
                     break;
                 }
                 else if (elements[elements.Count - 1] == "Water")
                 {
                     elements[elements.Count - 1] = "Mud";
-                    Instantiate(vfxHolder.MagicSparklePrefabs["NegationCircle"], this.transform.position - new Vector3(0, 0.5f, 0), Quaternion.identity);
+                    Sparkle[] Sparkles = GetComponentsInChildren<Sparkle>();
+                    Instantiate(vfxHolder.MagicSparklePrefabs["MudSparkle"], this.transform.position + new Vector3(0, 0.5f, 0), this.transform.rotation, this.transform);
+                    Destroy(Sparkles[elements.Count - 1].gameObject);
                     break;
                 }
                 else
@@ -121,13 +133,17 @@ public class MagicZone : MonoBehaviour
                 if (elements[elements.Count - 1] == "Fire")
                 {
                     elements[elements.Count - 1] = "Burst";
-                    Instantiate(vfxHolder.MagicSparklePrefabs["NegationCircle"], this.transform.position - new Vector3(0, 0.5f, 0), Quaternion.identity);
+                    Sparkle[] Sparkles = GetComponentsInChildren<Sparkle>();
+                    Instantiate(vfxHolder.MagicSparklePrefabs["BurstSparkle"], this.transform.position + new Vector3(0, 0.5f, 0), this.transform.rotation, this.transform);
+                    Destroy(Sparkles[elements.Count - 1].gameObject);
                     break;
                 }
                 else if (elements[elements.Count - 1] == "Water")
                 {
                     elements[elements.Count - 1] = "Vacuum";
-                    Instantiate(vfxHolder.MagicSparklePrefabs["NegationCircle"], this.transform.position - new Vector3(0, 0.5f, 0), Quaternion.identity);
+                    Sparkle[] Sparkles = GetComponentsInChildren<Sparkle>();
+                    Instantiate(vfxHolder.MagicSparklePrefabs["VacuumSparkle"], this.transform.position + new Vector3(0, 0.5f, 0), this.transform.rotation, this.transform);
+                    Destroy(Sparkles[elements.Count - 1].gameObject);
                     break;
                 }
                 else
@@ -149,9 +165,9 @@ public class MagicZone : MonoBehaviour
                     if (elements[i] == "Water")
                     {
                         elements.RemoveAt(i);
-                        ParticleSystem[] Sparkles = GetComponentsInChildren<ParticleSystem>();
-                        Instantiate(vfxHolder.MagicSparklePrefabs["NegationCircle"], this.transform.position, Quaternion.identity);
-                        Destroy(Sparkles[i + 1].gameObject);
+                        Sparkle[] Sparkles = GetComponentsInChildren<Sparkle>();
+                        Instantiate(vfxHolder.MagicSparklePrefabs["NegationCircle"], this.transform.position + new Vector3 (0,0.5f,0), this.transform.rotation);
+                        Destroy(Sparkles[i].gameObject);
                         negationFound = true;
                         break;
                     }
@@ -170,9 +186,9 @@ public class MagicZone : MonoBehaviour
                     if (elements[i] == "Fire")
                     {
                         elements.RemoveAt(i);
-                        ParticleSystem[] Sparkles = GetComponentsInChildren<ParticleSystem>();
-                        Instantiate(vfxHolder.MagicSparklePrefabs["NegationCircle"], this.transform.position, Quaternion.identity);
-                        Destroy(Sparkles[i + 1].gameObject);
+                        Sparkle[] Sparkles = GetComponentsInChildren<Sparkle>();
+                        Instantiate(vfxHolder.MagicSparklePrefabs["NegationCircle"], this.transform.position + new Vector3 (0,0.5f,0), this.transform.rotation);
+                        Destroy(Sparkles[i].gameObject);
                         negationFound = true;
                         break;
                     }
@@ -191,9 +207,9 @@ public class MagicZone : MonoBehaviour
                     if (elements[i] == "Lightning")
                     {
                         elements.RemoveAt(i);
-                        ParticleSystem[] Sparkles = GetComponentsInChildren<ParticleSystem>();
-                        Instantiate(vfxHolder.MagicSparklePrefabs["NegationCircle"], this.transform.position, Quaternion.identity);
-                        Destroy(Sparkles[i + 1].gameObject);
+                        Sparkle[] Sparkles = GetComponentsInChildren<Sparkle>();
+                        Instantiate(vfxHolder.MagicSparklePrefabs["NegationCircle"], this.transform.position + new Vector3 (0,0.5f,0), this.transform.rotation);
+                        Destroy(Sparkles[i].gameObject);
                         negationFound = true;
                         break;
                     }
@@ -212,9 +228,9 @@ public class MagicZone : MonoBehaviour
                     if (elements[i] == "Earth")
                     {
                         elements.RemoveAt(i);
-                        ParticleSystem[] Sparkles = GetComponentsInChildren<ParticleSystem>();
-                        Instantiate(vfxHolder.MagicSparklePrefabs["NegationCircle"], this.transform.position, Quaternion.identity);
-                        Destroy(Sparkles[i + 1].gameObject);
+                        Sparkle[] Sparkles = GetComponentsInChildren<Sparkle>();
+                        Instantiate(vfxHolder.MagicSparklePrefabs["NegationCircle"], this.transform.position + new Vector3 (0,0.5f,0), this.transform.rotation);
+                        Destroy(Sparkles[i].gameObject);
                         negationFound = true;
                         break;
                     }
