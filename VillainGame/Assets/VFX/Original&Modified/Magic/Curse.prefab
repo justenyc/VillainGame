@@ -23820,6 +23820,7 @@ GameObject:
   - component: {fileID: 6232228491602896162}
   - component: {fileID: 6232228491603002306}
   - component: {fileID: 6232228491591239486}
+  - component: {fileID: -8137227536881001563}
   m_Layer: 0
   m_Name: Curse
   m_TagString: Untagged
@@ -28633,6 +28634,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &-8137227536881001563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6232228491587392936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373ba55770b29bb4cac7f305ecafa055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6232228491587398572
 GameObject:
   m_ObjectHideFlags: 0

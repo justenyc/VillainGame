@@ -53,6 +53,10 @@ public class ConjureQueueUI : MonoBehaviour
                 uiTexts[index].GetComponentInParent<Image>().color = new Color(0, 255, 255);
                 break;
 
+            case "Curse":
+                uiTexts[index].GetComponentInParent<Image>().color = Color.white;
+                break;
+
             default:
                 uiTexts[index].GetComponentInParent<Image>().color = Color.white;
                 break;

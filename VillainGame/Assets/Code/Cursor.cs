@@ -91,6 +91,11 @@ public class Cursor : MonoBehaviour
             conjureQueue.Add("Fire");
             ConjureQueueUI.instance.UpdateQueue();
         }
+        else if (Input.GetKeyDown(KeyCode.X))
+        {
+            conjureQueue.Add("Curse");
+            ConjureQueueUI.instance.UpdateQueue();
+        }
     }
 
     void Conjure()

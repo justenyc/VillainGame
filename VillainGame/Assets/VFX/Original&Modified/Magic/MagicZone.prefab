@@ -1,5 +1,88 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1091234761
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1091234762}
+  - component: {fileID: 1091234763}
+  - component: {fileID: 549490166}
+  m_Layer: 2
+  m_Name: ElementIndicators
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1091234762
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091234761}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8997259393340842043}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1091234763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091234761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 4
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 15, y: 15}
+  m_Spacing: {x: 15, y: 0}
+  m_Constraint: 2
+  m_ConstraintCount: 1
+--- !u!114 &549490166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091234761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b72ab8c0abd03714c9aab32ea44baa09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elementIndicatorsArray:
+  - {fileID: 5890675183896877919, guid: aba558df7b0e053409941d47cb714ada, type: 3}
+  - {fileID: 6065500026981286559, guid: 46afa1294947d3d4198d93602d227af5, type: 3}
+  - {fileID: 7246632579072371955, guid: b407ce83cdc215543976c547f1d59dc4, type: 3}
+  - {fileID: 6882986554385010761, guid: 99958e273a8d67045b69218bdbddda44, type: 3}
+  - {fileID: 1440039922834860977, guid: 599a5dba9a2e40445b31049ba085acf1, type: 3}
+  - {fileID: 6159565436462834806, guid: ac9e10902284d5f4eae4c2d6a5671dcb, type: 3}
+  - {fileID: 1844757073104691402, guid: a1e49df9db74ba84eae2ca675aa0583c, type: 3}
+  - {fileID: 4532860133887526006, guid: 2201a10895e1b3a47ba01f7a82220e50, type: 3}
+  - {fileID: 4424827509000928247, guid: ec5ca15f3f97e66488ec52a30aff7e6e, type: 3}
 --- !u!1 &2505681064918608651
 GameObject:
   m_ObjectHideFlags: 0
@@ -4852,6 +4935,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 5.5
   elements: []
+  mzUi: {fileID: 0}
 --- !u!135 &2546597809155500835
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4896,7 +4980,7 @@ GameObject:
   - component: {fileID: 5944348283624342226}
   - component: {fileID: 991929967528768243}
   m_Layer: 2
-  m_Name: GameObject
+  m_Name: MagicZoneUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4957,15 +5041,16 @@ RectTransform:
   m_GameObject: {fileID: 7206263782471617507}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
-  m_Children: []
+  m_LocalScale: {x: 0.015, y: 0.015, z: 0.015}
+  m_Children:
+  - {fileID: 1091234762}
   m_Father: {fileID: 5944348283624342226}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 50, y: 50}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &5088780741000267004
 Canvas:

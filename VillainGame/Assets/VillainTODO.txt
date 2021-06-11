@@ -1,0 +1,2 @@
+Fix MagicZoneUI Order in hierarchy changes order in grid
+Update MagicSystem to include Curse

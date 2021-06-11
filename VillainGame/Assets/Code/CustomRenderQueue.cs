@@ -20,11 +20,21 @@ public class CustomRenderQueue : MonoBehaviour
         if (apply)
         {
             apply = false;
-            Image image = GetComponent<Image>();
-            Material existingGlobalMat = image.materialForRendering;
-            Material updatedMaterial = new Material(existingGlobalMat);
-            updatedMaterial.SetInt("unity_GUIZTestMode", (int)comparison);
-            image.material = updatedMaterial;
+
+            if (TryGetComponent(out Image img))
+            {
+                Material existingGlobalMat = img.materialForRendering;
+                Material updatedMaterial = new Material(existingGlobalMat);
+                updatedMaterial.SetInt("unity_GUIZTestMode", (int)comparison);
+                img.material = updatedMaterial;
+            }
+            else if (TryGetComponent(out Text txt))
+            {
+                Material existingGlobalMat = txt.materialForRendering;
+                Material updatedMaterial = new Material(existingGlobalMat);
+                updatedMaterial.SetInt("unity_GUIZTestMode", (int)comparison);
+                txt.material = updatedMaterial;
+            }
         }
     }
 }
